@@ -1,0 +1,344 @@
+
+:root {
+/*	colors used in this project*/
+	--primary-clr: #002D62;
+	--secondary-clr: #6CB4EE;
+	--gray-shade: #282828;
+	--primary-clr-ii: #007FFF;
+	--secondary-clr-ii:#0000FF;
+/* position top left bottom right*/
+	--top: 1rem;
+	--left: 1rem;
+	--bottom: 1rem;
+	--right: 1rem;
+/* margin  and padding values start here*/
+    --margin-sideNav-inline: 15vw;
+	--margin-sideNav-block: 15vh;
+	--margin-default: 1.2rem;
+	--margin-top-items: 1.5rem;
+	--margin-inline: 1.5rem;
+	--margin-block: 1.5rem;
+	--margin-top-mob: 5rem;
+	--margin-nav-logo: 2rem;
+	--margin-nav-logo-mob: ;
+	--margin-menu-ul: 2rem;
+	--margin-menu-ul-mob: ;
+	--padding-inline-items: 1rem;
+	--padding-inline-items-mob: ;
+	--padding-block-items: 0.5rem;
+	--padding-block-items-mob: ;
+/* border*/
+	--all-border: 1rem;
+	--all-border-radius: 1rem;
+	--all-small-border-radius: 0.5rem;
+	--border-radius-menu: 1.2rem;
+	--border: 0.2rem;
+	--border-width: 0.2rem;
+/* height used*/
+	--nav-height: 100px;
+	--side-Nav-height: 70vh;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Climate+Crisis&display=swap');
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+/*	background-color: black;*/
+	background-color: black;
+	font-family: 'Climate Crisis', cursive;
+}
+
+.main-nav {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: var(--nav-height);
+	box-shadow: 10px 1px 30px 0 var(--secondary-clr);
+
+}
+.prm-logo{
+	position: relative;
+	margin-left: var(--margin-nav-logo);
+	background-color: var(--primary-clr-ii);
+	color: white;
+	border-radius: var(--all-border);
+	padding-inline: var(--padding-inline-items);
+	padding-block: var(--padding-block-items);
+	font-weight: 700;
+	animation: logoAni 1s ease-out forwards;
+	z-index: 1;
+}
+
+.circ-Clock{
+	position: absolute;
+	margin-left: 4rem;
+	height: 70px;
+	width: 70px;
+	background-color: var(--secondary-clr);
+	border-radius: var(--all-border-radius);
+	animation: circ-Clock 5s linear infinite;
+	border: 2px solid var(--secondary-clr);
+	z-index: -1;
+}
+.circ-Clock1{
+	position: absolute;
+	top: 0;
+	height: 35px;
+	width: 35px;
+	border-radius: 50%;
+	background-color: var(--primary-clr);
+	animation: circ-Clock1 2s linear infinite;
+	border: 2px solid white;
+}
+.circ-Clock2{
+	position: absolute;
+	top: 0;
+	height: 17.5px;
+	width: 17.5px;
+	border-radius: 50%;
+	background-color: var(--secondary-clr);
+	border:1px solid white;
+}
+
+
+#menu-icon{
+	display: none;
+}
+.back-filter-menu-mob{
+		display: none;
+	}
+
+.menu{
+	position: relative;
+	width: 40%;
+	margin-right: var(--margin-menu-ul);
+	border-radius: var(--border-radius-menu);
+	border: var(--border-width) solid var(--primary-clr);
+	background: var(--primary-clr-ii);
+	display: flex;
+	justify-content: space-between;
+	animation: menu 1s linear forwards;
+	list-style: none;
+	color: white;
+	font-weight: 700;
+	overflow: hidden;
+}
+.menu li{
+	padding-inline: var(--padding-inline-items);
+	padding-block: var(--padding-block-items);
+}
+
+
+.side-nav{
+	position: absolute;
+	height: var(--side-Nav-height);
+	width: 50px;
+	margin-block: var(--margin-block);
+	margin-inline: var(--margin-inline);
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	border-radius: var(--all-border-radius);
+	background-color: var(--primary-clr-ii);
+	border-radius: var(--all-border-radius);
+	border: var(--border-width) solid var(--primary-clr);
+}
+.menu-expand{
+	height: 40px;
+	width: 40px;
+	margin-inline: 2.5px;
+	margin-block: var(--margin-default);
+	background-image: url("expand-icon.svg");
+	background-repeat: no-repeat;
+	border-radius: var(--all-small-border-radius);
+	border: none;
+}
+
+.side-nav ul{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	list-style: none;
+	font-weight: 700;
+	color: white;
+}
+.blur-expand{
+	position: absolute;
+	display: none;
+	margin-inline: var(--margin-default);
+	left: 100%;
+	width: 20vw;
+	height: var(--side-Nav-height);
+	flex-direction: column;
+	background-image: url("sample-girl.jpg");
+	border-top-right-radius: var(--all-border-radius);
+	border-bottom-right-radius: var(--all-border-radius);
+	overflow: hidden;
+	border: var(--border-width) solid white;
+}
+.back-blur{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	width: 100%;
+	backdrop-filter: blur(20px);
+}
+
+/*logo and menu-list item link, visited, hover and active*/
+
+
+.prm-logo a {
+	cursor: pointer;
+}
+.prm-logo a:link{
+	color: white;
+	text-decoration: none;
+}
+.prm-logo:hover{
+	color: white;
+	text-decoration: none;
+	background-color: var(--primary-clr);
+}
+.prm-logo:active{
+
+}
+.menu li a{
+	cursor: pointer;
+}
+.menu li a:link{
+	color: white;
+	text-decoration: none;
+}
+.menu li:hover{
+	color: white;
+	text-decoration: none;
+	background-color: var(--primary-clr);
+}
+.menu li a:active{
+	
+}
+
+/*media queries*/
+
+
+@media only screen and (max-width: 700px){
+	.menu-mob{
+		position: absolute;
+		top: 100px;
+		right: 0;
+		width: 100%;
+		display: none;
+		margin: var(--margin-default) 0 0 0;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		animation: mob 0.5s linear forwards;
+	}
+	#menu-icon{
+		margin-right: var(--margin-menu-ul);
+		display: block;
+		float: right;
+		height: 50px;
+		width: 50px;
+		font-weight: 700;
+		background: var(--primary-clr-ii);
+		color: white;
+		border-radius: var(--border);
+		border: none;
+	}
+
+	.side-nav{
+		position: float;
+		height: 40px;
+		width: 70vw;
+		bottom: 0;
+		margin-block: var(--margin-block);
+		margin-inline: var(--margin-sideNav-inline);
+		flex-direction: row;
+	}
+	.menu-expand{
+		display: none;
+	}
+	.side-nav ul{
+		flex-direction: row;
+	}
+	/*hover properties for mobile devices*/
+
+	#menu-icon{
+		cursor: pointer;
+	}
+	#menu-icon:hover{
+		background-color: var(--primary-clr);
+	}
+	#menu-icon:active{
+		color: var(--primary-clr-ii);
+	}
+
+	/*mobile animations*/
+
+	@keyframes mob{
+		from{
+			transform: translateY(-1.2rem);
+		}
+		to{
+			transform: translateY(0);
+		}
+	}
+
+}
+
+
+/* nav-icon animation */
+
+
+@keyframes circ-Clock{
+	0%{
+		transform-origin: center;
+		rotate: 0deg;
+	}
+	100%{
+		rotate: 360deg;
+	}
+}
+@keyframes circ-Clock1{
+	0%{
+		transform-origin: var(--secondary-clr);
+		rotate: 0deg;
+	}
+	30%{
+		background-color: var(--primary-clr);
+	}
+	60%{
+		background-color: var(--secondary-clr-ii);
+	}
+	90%{
+		background-color: var(--primary-clr-ii);
+	}
+	100%{
+		rotate: 360deg;
+	}
+}
+@keyframes logoAni{
+	from{
+		transform: translateX(-40px);
+	}
+	to{
+		transform: translateX(0);
+	}
+}
+@keyframes menu{
+	from{
+		transform: translateX(40px);
+	}
+	to{
+		transform: translateX(0px);
+	}
+}
