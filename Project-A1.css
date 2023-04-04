@@ -1,11 +1,14 @@
 
 :root {
 /*	colors used in this project*/
-	--primary-clr: #002D62;
-	--secondary-clr: #6CB4EE;
+	--primary-clr: darkgray;
+	--secondary-clr: forestgreen;
 	--gray-shade: #282828;
-	--primary-clr-ii: #007FFF;
-	--secondary-clr-ii:#0000FF;
+	--primary-clr-ii: green;
+	--secondary-clr-ii: limegreen;
+	/* logo colors*/
+	--logo-c-small: black;
+	--logo-c-middle: black;
 /* position top left bottom right*/
 	--top: 1rem;
 	--left: 1rem;
@@ -92,7 +95,7 @@ body {
 	height: 35px;
 	width: 35px;
 	border-radius: 50%;
-	background-color: var(--primary-clr);
+	background-color: var(--logo-c-middle);
 	animation: circ-Clock1 2s linear infinite;
 	border: 2px solid white;
 }
@@ -102,7 +105,7 @@ body {
 	height: 17.5px;
 	width: 17.5px;
 	border-radius: 50%;
-	background-color: var(--secondary-clr);
+	background-color: var(--logo-c-small);
 	border:1px solid white;
 }
 
@@ -309,20 +312,10 @@ body {
 	}
 }
 @keyframes circ-Clock1{
-	0%{
-		transform-origin: var(--secondary-clr);
+	from{
 		rotate: 0deg;
 	}
-	30%{
-		background-color: var(--primary-clr);
-	}
-	60%{
-		background-color: var(--secondary-clr-ii);
-	}
-	90%{
-		background-color: var(--primary-clr-ii);
-	}
-	100%{
+	to{
 		rotate: 360deg;
 	}
 }
